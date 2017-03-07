@@ -1,0 +1,749 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Bungee+Inline');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Rajdhani|VT323');
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Overpass+Mono');
+@import url('https://fonts.googleapis.com/css?family=Overpass');
+@import url('https://fonts.googleapis.com/css?family=Arsenal');
+
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #4f4848;
+    background: url("https://images4.alphacoders.com/207/thumb-1920-207828.jpg") top center fixed;
+}
+
+/*-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-*/
+/*-------------------------HEADER-------------------------*/
+/*-------------------------------------------------------*/
+
+header {  
+    background-color: #313234;
+}
+nav {
+    position: fixed;
+    z-index: 100;
+}
+.container {
+    width:100%;
+}
+header > nav ul {
+    float: right;
+}
+header > nav ul > li > a {
+    line-height: 50px;
+    padding: 0 20px;
+    display: block;
+    animation:przesun 0.8s linear ;
+    -webkit-animation:przesun 0.8s linear;
+}
+@keyframes przesun {
+        0% { transform:translateY(-100%); }
+        100% { transform:translateY(0); }
+}
+
+header > nav ul > li > a:hover {
+    background-color: slategrey;
+}
+
+
+/*----------------------HEADER-ROW------------------------*/
+
+.row:before, .row:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.row:after {
+    clear: both;
+}
+.container .row img {
+    width: 150px;
+    height: 50px;
+    background-color: slategray;
+}
+
+/*--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!--*/
+/*---------------------HERO SECTION-----------------------*/
+/*--------------------------------------------------------*/
+
+.hero {
+    background-position: center;
+    padding-top: 200px;
+}
+
+
+/*---------------------HERO-SLOGAN-----------------------*/
+
+.slogan {
+    background-color: inherit;
+}
+
+.slogan h1 {
+    font-size: 38px;
+    padding: 15px;
+    animation:appear 1s linear ;
+    -webkit-animation:appear 1s linear;
+    
+}
+@keyframes appear {
+        0% { transform:translateX(-600%); }
+        100% { transform:translateX(0); }
+}
+.slogan h2 {
+    font-size: 48px;
+    animation:appear2 1s linear ;
+    -webkit-animation:appear2 1s linear;
+    
+}
+@keyframes appear2 {
+        0% { transform:translateX(600%); }
+        100% { transform:translateX(0); }
+        
+}
+.niceButton {
+	font-family: 'Overpass Mono', monospace;
+	font-size: 14px;
+	padding: 10px 20px;
+	background: -moz-linear-gradient(
+		top,
+		#a3a3a3 0%,
+		#3b3b3b 50%,
+		#242424 50%,
+		#000000);
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#a3a3a3),
+		color-stop(0.50, #3b3b3b),
+		color-stop(0.50, #242424),
+		to(#000000));
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #000000;
+	-moz-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.6);
+	-webkit-box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.6);
+	box-shadow:
+		0px 1px 3px rgba(000,000,000,0.5),
+		inset 0px 0px 1px rgba(255,255,255,0.6);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,1),
+		0px 1px 0px rgba(255,255,255,0.2);
+    opacity:0.8;
+
+    
+}
+.niceButton:hover {
+    opacity: 0.7;
+}
+[class^="btn-"] {
+    margin: 4px 2px;
+    padding: 15px 30px;
+    min-width: 160px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+
+
+/*--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!--*/
+/*--------------------------GRID--------------------------*/
+/*--------------------------------------------------------*/
+
+.about {
+    height: 100px;
+    text-align: center;
+}
+.about h3 {
+    padding-top: 35px;
+}
+.grid p {
+    padding: 8px;
+}
+.grid p:last-child {
+    text-align: center;
+}
+.image {
+    padding-right: 50px;
+    padding-top: 20px;
+
+}
+.image img {
+    margin-top: 15%;
+    width: 100%;
+    padding: 15%;
+    padding-top: 0%;
+}
+.infotext{
+    padding: 5%;
+    text-align: center;
+}
+
+
+/*--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!--*/
+/*------------------------Technologies-------------------------*/
+/*--------------------------------------------------------*/
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  25% {
+      transform: scale(1.2)
+  }
+  50% {
+    transform: scale(0.7);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.technologies .images img {
+    height:120px; 
+    width:120px;
+}
+.technologies .images ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0px;
+}
+.technologies .images ul li {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px 10px 0px 10px;
+    background-color: silver;
+    margin-top: 10px;
+}
+.technologies .images ul li img {
+    animation-duration: 4.5s;
+    animation-name: bounceIn;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+}
+.technologies .images ul li p {
+    font-family: 'Overpass', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.technologies h1 {
+    font-size: 30px;
+    padding-top: 50px;
+    margin-top: 80px;
+}
+.technologies h3 {
+    padding: 5px;
+}
+
+
+#ajax {
+    width:180px;
+}
+
+/*--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!--*/
+/*------------------------FEATURED------------------------*/
+/*--------------------------------------------------------*/
+
+.featured {
+    margin: 0 12% 20px 12%;
+}
+.featured h1 {
+    font-weight: 800;
+    padding-top: 60px;
+    margin-top: 0;
+}
+
+
+/*--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!--*/
+/*------------------------GALLERY-------------------------*/
+/*--------------------------------------------------------*/
+
+
+.gallery {
+    
+    min-height: 900px;
+}
+
+.gallery .projects {
+    margin-top: 5%;
+}
+.gallery .line {
+    padding-left: 2%;
+}
+
+
+/*-----------------------GALLERY-IMG----------------------*/
+
+.img-1 {
+    background-image: url(http://imageshack.com/a/img924/5732/2l0Wy4.png);
+}
+.img-2 {
+    background-image: url(http://imageshack.com/a/img923/1056/Mg73g3.png);
+}
+.img-3 {
+    background-image: url(http://imageshack.com/a/img924/2861/vMBDvM.png);
+}
+.img-4 {
+    background-image: url(http://imageshack.com/a/img923/2010/B8JDSb.png);
+}
+.img-5 {
+    background-image: url(http://imageshack.com/a/img924/1418/wV1zf4.png);
+}
+.img-6 {
+    background-image: url(http://i.imgur.com/oT2WH8x.png);
+}
+.img-7 {
+    background-image: url(http://i.imgur.com/YqEryrQ.png);
+}
+[class*="img-"] {
+    height: 350px;
+}
+.col-41 {
+    width: 30%;
+    margin: 1.5%;
+}
+.col-41 .hidden {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 1);
+
+}
+.hidden button:hover {
+    cursor: pointer;
+}
+.col-41:hover .hidden {
+    transition: 1s ease;
+    opacity: 0.81;
+    text-align: center;
+}
+.col-41:hover .hidden p {
+    margin-top: 30%;
+    font-size: 22px;
+    
+}
+.col-41:hover .hidden button {
+    opacity: 0.7;
+    height: 30px;
+    width: 50px;
+    animation:appear3 0.6s linear ;
+    -webkit-animation:appear3 0.6s linear;
+}
+@keyframes appear3 {
+        0% { transform:translateY(600%); }
+        100% { transform:translateY(0); }
+        
+}
+.col-41:hover .hidden p {
+    animation:appear4 0.8s linear ;
+    -webkit-animation:appear4 0.8s linear;
+}
+@keyframes appear4 {
+        0% { transform:translatex(600%); }
+        100% { transform:translatex(0); }
+        
+}
+.col-41:hover .hidden button:hover {
+    background-color: orange;
+}
+.col-41:hover .hidden button i.fa-lg {
+    color: black;
+}
+.col-41:hover .hidden button:active {
+    background-color: red;
+}
+.col-41 .hidden button {
+    border: 0 solid white;
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5%;
+    opacity: 0.6;
+    
+}
+.col-41 .hidden i.fa-lg {
+    height: 20px;
+    width: 25px;
+    font-size: 28px;
+}
+
+
+
+/*--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!--*/
+/*-------------------------FOOTER-------------------------*/
+/*--------------------------------------------------------*/
+
+
+.footer {
+    height: 500px;
+}
+.social .icon-btn {
+    width: 75px;
+    height: 75px;
+    background-color: inherit;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 40px;
+    margin: 10px;
+    border-style: none;;
+}
+.social .fa-facebook {
+    color: #3B5998;
+}
+.social .fa-github {
+    color: black;
+}
+.social .fa-linkedin {
+    color: #006fa6;
+}
+.social .linkedin:hover {
+    background-color: #006fa6;
+}
+
+.social .icon-btn:hover {
+    transform: scale(1.10);
+    transition: 0.7s;
+}
+.social .facebook:hover {
+    background-color: #3B5998;
+}
+.social .github:hover {
+    background-color: black;
+}
+.social .facebook:hover .fa-facebook, .social .linkedin:hover .fa-linkedin, .social .github:hover .fa-github, .niceButton {
+    color: white;
+}
+
+/*--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!--*/
+/*-------------------------FOOTER2------------------------*/
+/*--------------------------------------------------------*/
+
+
+.footer2 {
+    padding: 5px;
+    font-size: 18px;
+}
+
+body, .container, .slogan {
+    margin: 0 auto;
+}
+body, [class*="col-"] {
+    font-family: 'Rajdhani', sans-serif;
+}
+
+body, .hero, [class*="col-"] {
+    background-size: cover;
+}
+nav, .footer2 {
+    background-color: black;
+}
+header > nav ul, .slogan h1, .col-41 .hidden i.fa-lg {
+    margin: 0;
+}
+header > nav ul, .grid {
+    padding: 0;
+}
+header > nav ul, .technologies .images ul {
+    list-style-type: none;
+    padding-top: 17px;
+}
+header > nav ul > li, [class^="btn-"] {
+    display: inline-block;
+}
+header > nav ul > li, .btn-orange a, .footer {
+    font-size: 20px;
+}
+header > nav ul > li, .slogan h1, .slogan h2, [class^="btn-"], .btn-orange a, .about, .technologies h1, .technologies h3, .col-41:hover .hidden p {
+    font-weight: bold;
+}
+header > nav ul > li > a, .slogan, .btn-orange:hover, .about, .featured h1, .footer2, .social .facebook:hover, .social .github:hover {
+    color: white;
+}
+header > nav ul > li > a, .btn-orange a, .niceButton {
+    text-decoration: none;
+}
+header > nav ul > li > a, .about, .technologies h1, .technologies h3, .featured h1, .niceButton {
+    text-transform: uppercase;
+}
+.hero, .grid, .technologies, .gallery {
+    min-height: 850px;
+}
+.hero, .img-1, .img-2, .img-3, .img-4, .img-5, .img-6, .img-7 {
+    position: relative;
+}
+.hero, .technologies .images ul {
+    display: flex;
+}
+.slogan, .images, .featured, .footer, .footer2 {
+    text-align: center;
+} 
+.slogan, .btn-orange {
+    border: 0px solid;
+}
+.slogan {
+    border-radius: 8px;
+}
+.grid, .gallery {
+    background: rgba(0, 0, 0, 0.6);
+} 
+.grid p, .technologies h1, .technoligies h3, .footer2 {
+    font-family: 'Arsenal', sans-serif;
+    } 
+.about, .grid p, .technologies h3 {
+    font-size: 24px;
+}
+.grid p, .col-41:hover .hidden p {
+    color: ghostwhite;
+}
+.technologies, .footer {
+    background: rgba(255, 255, 255, 0.8);
+}
+.footer .fa-adress-book, .footer .fa-envelope-o, .footer .fa-volume-control-phone {
+    font-size: 26px;
+}
+.img-1, .img-2, .img-3, .img-4, .img-5, .img-6, .img-7, .col-41:hover .hidden {
+    visibility: visible;
+}
+.col-41 .hidden, .footer, .footer2 {
+    width: 100%;
+}
+.img-1, .img-2, .img-3, .img-4, .img-5, .img-6, .img-7 {
+    border: 0px;
+    border-radius: 10px;
+    background-position: center;
+}
+.slogan h1, .niceButton:hover {
+    color: orange;
+}
+
+
+
+/*--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!--*/
+/*-------------------------COLUMN-------------------------*/
+/*--------------------------------------------------------*/
+
+[class*="col-"] {
+    float: left;
+    min-height: 35px;
+    
+    
+    
+}
+
+.col-1 {
+    width: 8.33%;
+}
+.col-2 {
+    width: 16.66%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-4 {
+    width: 33.33%;
+}
+.col-5 {
+    width: 41.66%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-7 {
+    width: 58.33%;
+}
+.col-8 {
+    width: 66.66%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-10 {
+    width: 83.33%;
+}
+.col-11 {
+    width: 91.66%;
+}
+.col-12 {
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+
+    
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+    .col-s-20 {width: 20%;}
+    .col-s-40 {width: 40%;}
+    
+    .container ul {
+        font-weight: 900;
+    }
+    .container ul li a {
+        background-color: darkgrey;
+        border: 2px solid grey;
+        border-radius: 10px;
+        line-height: 25px;
+        text-align: center;
+    }
+    .slogan {
+        padding-top: 100px;
+    }
+    .slogan h2 {
+        font-weight: bold;
+        font-size: 28px;
+    }
+    [class^="btn-"] {
+        padding: 15px 25px;
+    }
+    .row .image {
+        width: 100%;
+    }
+    .infotext {
+        padding: 20px;
+    }
+    .image img {
+        width: 100%;;
+    }
+    .infotext p {
+        font-size: 24px;
+    }
+    .gallery, .technologies, .grid {
+        margin-bottom: 50px;
+    }
+    .technologies ul li {
+        padding: 10px;
+    }
+    .gallery .line {
+        padding: 0px;
+    }
+    .img-1 ,.img-2, .img-3, .img-4, .img-5, img-6, .img-7 {
+        margin-left: 25%;
+    }
+    .container ul, .about h3 {
+        font-size: 30px;
+    } 
+    .container, .container ul li, .row .image, .gallery {
+        display: block;
+    }
+    .container ul, .row image, .gallery, .img-1, .img-2, .img-3, .img-4, .img-5, .img-6, .img-7 {
+        float: none;
+    }
+    .img-1, .img-2, .img-3, .img-4, .img-5, .img-6, .img-7 {
+        margin: 10px 16.67%;
+    }
+    
+    .container ul li, .gallery {
+        width: 96%;
+        margin: 2%;
+    }
+    .slogan h1, .gallery h1 {
+        font-size: 24px;
+    }
+    .row .image, .technologies ul li {
+        margin: 0;
+        padding: 0;
+    }
+    .featured p, .footer {
+        font-size: 20px;
+    }
+    .technologies {
+        max-height: 1600px;
+    }
+
+
+
+
+
+}
+@media (max-width: 480px) {
+    /* For desktop: */
+    .col-xs-1 {width: 8.33%;}
+    .col-xs-2 {width: 16.66%;}
+    .col-xs-3 {width: 25%;}
+    .col-xs-4 {width: 33.33%;}
+    .col-xs-5 {width: 41.66%;}
+    .col-xs-6 {width: 50%;}
+    .col-xs-7 {width: 58.33%;}
+    .col-xs-8 {width: 66.66%;}
+    .col-xs-9 {width: 75%;}
+    .col-xs-10 {width: 83.33%;}
+    .col-xs-11 {width: 91.66%;}
+    .col-xs-12 {width: 100%;}
+    .col-xs-20 {width: 20%;}
+    .col-xs-40 {width: 40%;}
+    
+    .hero {
+        height: 600px;
+    }
+    .slogan h2 {
+        font-weight: bold;
+        font-size: 24px;
+    }
+    [class^="btn-"] {
+        padding: 10px 20px;
+    }
+
+    .grid {
+        height: 1200px;
+    }
+    .technologies h1 {
+        padding-top: 20px;
+    }
+    .technologies h3 {
+        padding: 5px;
+    }
+    .technologies .images ul {
+        padding: 0px;
+    }
+    .gallery, .technologies, .grid {
+        margin-bottom: 50px;
+    }
+    .img-1, .img-2, .img-3, .img-4, .img-5, .img-6, .img-7 {
+        background-position: center;
+    }
+    .footer {
+        max-height: 430px;
+    }
+    .technologies h3, .footer, .footer .fa-adress-book, .footer .fa-envelope-o, .footer .fa-volume-control-phone {
+        font-size: 16px;
+    }
+    .social .icon-btn {
+        font-size: 28px;
+    }
+    .slogan h1, .technologies h1, .gallery h1, .footer h2 {
+        font-size: 20px;
+    }
+}
+@media (min-width: 1500px) {
+    .infotext {
+        margin-top: 5%;
+    }
+}
